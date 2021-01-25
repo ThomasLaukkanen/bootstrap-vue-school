@@ -8,7 +8,10 @@
 export default {
   data() {
     return {
-      items: [{ jobb: 'frontend utvecklare', lön: 30000 }],
+      items: [
+        { jobb: 'frontend utvecklare', lön: 30000 },
+        { jobb: 'Hacker', lön: 50000 },
+      ],
     }
   },
 }

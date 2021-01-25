@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-form @submit="onSubmit" @reset="onReset" v-if="show" class="">
+    <b-form @submit="onSubmit" v-if="show" class="">
       <b-form-group
         id="search-group"
         label="Sök ett jobb"
