@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <HelloWorld msg="Välkommen till thomas värld" />
+    <HelloWorld msg="Hitta drömyrket idag!" />
     <SearchField />
     <JobResultTable />
   </div>

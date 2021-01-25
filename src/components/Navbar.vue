@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-navbar toggleable="sm" type="dark" variant="primary">
-      <b-navbar-brand href="#">Thomas Website</b-navbar-brand>
+      <b-navbar-brand href="#">It jobben</b-navbar-brand>
       <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
       <b-collapse id="nav-text-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
