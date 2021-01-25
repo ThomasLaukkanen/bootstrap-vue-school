@@ -5,11 +5,9 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    searchResult: ['ett jobb resultat'],
   },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
+  mutations: {},
+  actions: {},
+  modules: {},
 })
