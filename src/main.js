@@ -4,9 +4,10 @@ import router from './router'
 import store from './store'
 import './main.scss'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
-const axios = require('axios').default
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 
-Vue.use(axios)
+Vue.use(VueAxios, axios)
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 
