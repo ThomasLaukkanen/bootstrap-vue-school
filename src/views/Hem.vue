@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <HelloWorld msg="Hitta drömyrket idag!" />
+    <HelloWorld msg="Gör göteborg en bättre stad!" />
     <SearchField />
     <JobResultTable />
   </div>
@@ -13,7 +13,7 @@ import SearchField from '@/components/SearchField.vue'
 import JobResultTable from '@/components/JobResultTable'
 
 export default {
-  name: 'Home',
+  name: 'Hem',
   components: {
     HelloWorld,
     SearchField,
