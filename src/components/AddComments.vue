@@ -1,17 +1,22 @@
 <template>
   <div>
-    <p :key="comment" v-for="comment in $store.state.comments">
-      {{ comment.text }} {{ comment.name }}
+    <p :key="comment.name" v-for="comment in $store.state.comments">
+      {{ comment.text }}
     </p>
 
     <b-form @submit="onSubmit">
       <b-form-textarea
-        v-model="comment"
+        v-model="comment.text"
         placeholder="Kommentera"
         max-rows="3"
         required
       ></b-form-textarea>
-      <b-form-input type="text" placeholder="namn" required></b-form-input>
+      <b-form-input
+        type="text"
+        placeholder="Namn"
+        required
+        v-model="comment.name"
+      ></b-form-input>
       <b-button type="submit" variant="primary">Kommentera</b-button>
     </b-form>
   </div>
@@ -31,9 +36,8 @@ export default {
     onSubmit(event) {
       event.preventDefault()
       this.$store.commit('addComment', this.comment)
-
-      this.comment = ''
-      this.comment = 'text'
+      this.comment.text = ''
+      this.comment.name = ''
     },
   },
 }

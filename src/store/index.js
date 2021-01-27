@@ -7,7 +7,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     politiker: ['Thomas', 'Elizabeth', 'Göran person'],
-    comments: ['Bästa politikern i stan', 'Thomas to president'],
+    comments: [],
   },
   actions: {},
   mutations: {
