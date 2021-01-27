@@ -1,7 +1,7 @@
 <template>
   <div>
-    <p :key="comment.name" v-for="comment in $store.state.comments">
-      {{ comment.text }}
+    <p :key="comment.uuid" v-for="comment in $store.state.comments">
+      {{ comment.text }} {{ comment.name }}
     </p>
 
     <b-form @submit="onSubmit">
@@ -23,12 +23,15 @@
 </template>
 
 <script>
+import { uuid } from 'vue-uuid'
+
 export default {
   data() {
     return {
       comment: {
         text: '',
         name: '',
+        uuid: uuid.v4(),
       },
     }
   },
@@ -36,6 +39,7 @@ export default {
     onSubmit(event) {
       event.preventDefault()
       this.$store.commit('addComment', this.comment)
+      this.comment.uuid = this.$uuid.v4()
       this.comment.text = ''
       this.comment.name = ''
     },

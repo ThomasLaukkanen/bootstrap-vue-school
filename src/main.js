@@ -6,10 +6,12 @@ import './main.scss'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+import UUID from 'vue-uuid'
 
 Vue.use(VueAxios, axios)
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
+Vue.use(UUID)
 
 Vue.config.productionTip = false
 
