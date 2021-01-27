@@ -2,6 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Hem from '../views/Hem.vue'
 import Stats from '../views/Stats.vue'
+import Politik from '../views/Politik.vue'
+import Polisen from '../views/Polisen.vue'
+import Jobb from '../views/Jobb.vue'
 
 Vue.use(VueRouter)
 
@@ -23,6 +26,21 @@ const routes = [
     path: '/stats',
     name: 'Stats',
     component: Stats,
+  },
+  {
+    path: '/politik',
+    name: 'Politik',
+    component: Politik,
+  },
+  {
+    path: '/polisen',
+    name: 'Polisen',
+    component: Polisen,
+  },
+  {
+    path: '/Jobb',
+    name: 'Jobb',
+    component: Jobb,
   },
 ]
 

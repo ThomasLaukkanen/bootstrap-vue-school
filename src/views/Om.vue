@@ -1,5 +1,6 @@
 <template>
   <div>
-    <h1>This is an about page</h1>
+    <h1>Om Göteborgarna</h1>
+    <p>Den här websidan är skapad av Göteborgarna för Göteborgarna</p>
   </div>
 </template>
