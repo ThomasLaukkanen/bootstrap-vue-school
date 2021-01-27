@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     onClick() {
-      this.$store.commit('addNameToList', 'tjugosex')
+      this.$store.commit('addNameToList', 'email')
     },
   },
 }

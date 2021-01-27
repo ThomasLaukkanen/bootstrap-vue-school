@@ -6,8 +6,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    politiker: ['Thomas', 'Elizabeth'],
-    comments: ['Bästa politikern i stan'],
+    politiker: ['Thomas', 'Elizabeth', 'Göran person'],
+    comments: ['Bästa politikern i stan', 'Thomas to president'],
   },
   actions: {},
   mutations: {
@@ -15,7 +15,7 @@ export default new Vuex.Store({
       state.politiker.push(payLoad)
     },
     addComment(state, comment) {
-      state.politiker.push(comment)
+      state.comments.push(comment)
     },
   },
 })
