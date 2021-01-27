@@ -1,5 +1,10 @@
 <template>
   <div class="home">
+    <p :key="politiker" v-for="politiker in $store.state.politiker">
+      {{ politiker }}
+    </p>
+
+    <b-button @click="onClick" variant="primary">Ändra värde</b-button>
     <HelloWorld msg="Gör Göteborg till en bättre stad!" />
     <SearchField />
   </div>
@@ -15,6 +20,11 @@ export default {
   components: {
     HelloWorld,
     SearchField,
+  },
+  methods: {
+    onClick() {
+      this.$store.commit('addNameToList', 'tjugosex')
+    },
   },
 }
 </script>
