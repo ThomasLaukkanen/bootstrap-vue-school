@@ -7,6 +7,7 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import UUID from 'vue-uuid'
+import './registerServiceWorker'
 
 Vue.use(VueAxios, axios)
 Vue.use(BootstrapVue)
