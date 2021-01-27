@@ -5,7 +5,7 @@
     </p>
 
     <b-button @click="onClick" variant="primary">Ändra värde</b-button>
-    <HelloWorld msg="Gör Göteborg till en bättre stad!" />
+    <HelloWorld msg="Hjälp till att skapa drömstaden Göteborg!" />
     <SearchField />
   </div>
 </template>
