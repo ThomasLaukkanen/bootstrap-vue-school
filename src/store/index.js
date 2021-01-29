@@ -14,7 +14,7 @@ export default new Vuex.Store({
     addNameToList(state, payLoad) {
       state.politiker.push(payLoad)
     },
-    addComment(state, comment) {
+    addcomment(state, comment) {
       state.comments.push(comment)
     },
   },

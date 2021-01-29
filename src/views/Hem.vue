@@ -7,7 +7,6 @@
     <b-button @click="onClick" variant="primary">Ändra värde</b-button>
     <HelloWorld msg="Hjälp till att skapa drömstaden Göteborg!" />
     <SearchField />
-    <UUUID />
   </div>
 </template>
 
@@ -15,14 +14,12 @@
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
 import SearchField from '@/components/SearchField.vue'
-import UUUID from '@/components/UUUID.vue'
 
 export default {
   name: 'Hem',
   components: {
     HelloWorld,
     SearchField,
-    UUUID,
   },
   methods: {
     onClick() {

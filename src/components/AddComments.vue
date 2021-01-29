@@ -17,7 +17,9 @@
         required
         v-model="comment.name"
       ></b-form-input>
-      <b-button type="submit" variant="primary">Kommentera</b-button>
+      <b-button @click="onClick" type="submit" variant="primary"
+        >Kommentera</b-button
+      >
     </b-form>
   </div>
 </template>
@@ -38,10 +40,13 @@ export default {
   methods: {
     onSubmit(event) {
       event.preventDefault()
-      this.$store.commit('addComment', this.comment)
+      this.$store.commit('addcomment', this.comment)
       this.comment.uuid = this.$uuid.v4()
       this.comment.text = ''
       this.comment.name = ''
+    },
+    onClick() {
+      this.$emit('my-event')
     },
   },
 }

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <AddComments />
+    <AddComments @my-event="theEvent" />
     <CardProfile />
   </div>
 </template>
@@ -13,6 +13,11 @@ export default {
   components: {
     CardProfile,
     AddComments,
+  },
+  methods: {
+    theEvent() {
+      alert('hej')
+    },
   },
 }
 </script>
