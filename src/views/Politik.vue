@@ -16,7 +16,8 @@ export default {
   },
   methods: {
     theEvent() {
-      alert('hej')
+      // alert('hej')
+      console.log('a custom event from addComments')
     },
   },
 }

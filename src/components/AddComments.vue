@@ -1,7 +1,7 @@
 <template>
   <div>
-    <p :key="comment.uuid" v-for="comment in $store.state.comments">
-      {{ comment.text }} {{ comment.name }}
+    <p :key="message.uuid" v-for="message in $store.state.comments">
+      {{ message.text }} {{ message.name }}
     </p>
 
     <b-form @submit="onSubmit">
@@ -40,10 +40,14 @@ export default {
   methods: {
     onSubmit(event) {
       event.preventDefault()
-      this.$store.commit('addcomment', this.comment)
-      this.comment.uuid = this.$uuid.v4()
+      this.$store.commit('addcomment', {
+        uuid: this.$uuid.v4(),
+        text: this.comment.text,
+        name: this.comment.name,
+      })
       this.comment.text = ''
       this.comment.name = ''
+      this.comment.uuid = this.$uuid.v4()
     },
     onClick() {
       this.$emit('my-event')
