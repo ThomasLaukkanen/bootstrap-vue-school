@@ -1,19 +1,25 @@
 <template>
   <div>
-    <p :key="message.uuid" v-for="message in $store.state.comments">
-      {{ message.text }} {{ message.name }}
-    </p>
+    <section>
+      <h2>Kommentarer</h2>
+      <p v-if="$store.state.comments.length < 1">
+        Det finns inga kommentarer ännu
+      </p>
+      <p v-else :key="message.uuid" v-for="message in $store.state.comments">
+        {{ message.text }} {{ message.name }}
+      </p>
+    </section>
 
     <b-form @submit="onSubmit">
       <b-form-textarea
         v-model="comment.text"
-        placeholder="Kommentera"
+        placeholder="Lämna en kommentar"
         max-rows="3"
         required
       ></b-form-textarea>
       <b-form-input
         type="text"
-        placeholder="Namn"
+        placeholder="Ditt namn"
         required
         v-model="comment.name"
       ></b-form-input>
