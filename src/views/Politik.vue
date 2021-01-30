@@ -1,7 +1,7 @@
 <template>
   <div>
     <AddComments @my-event="theEvent" />
-    <CardProfile />
+    <CardProfile title="Thomas Laukkanen" text="Blablabla" />
   </div>
 </template>
 

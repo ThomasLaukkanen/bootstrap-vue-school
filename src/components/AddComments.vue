@@ -1,8 +1,7 @@
 <template>
-  <div>
+  <b-container fluid="sm">
     <section>
       <h2>Feedback sektion</h2>
-
       <small>{{ $store.state.comments.length }} kommentarer</small>
 
       <p v-if="$store.state.comments.length < 1">
@@ -11,14 +10,24 @@
       </p>
       <p v-else :key="message.uuid" v-for="message in $store.state.comments">
         <b-avatar src="https://www.thispersondoesnotexist.com/image"></b-avatar>
-        {{ message.name }}
+        <b> @ {{ message.name }} </b>
         {{ message.text }}
+        <br />
+        {{ message.time }}
 
-        <b-icon @click="message.likes++" icon="hand-thumbs-up"></b-icon>
+        <b-icon
+          @click="message.likes++"
+          icon="hand-thumbs-up"
+          variant="success"
+        ></b-icon>
         {{ message.likes }}
-        <b-icon @click="message.dislikes++" icon="hand-thumbs-down"></b-icon>
+        <b-icon
+          @click="message.dislikes++"
+          icon="hand-thumbs-down"
+          variant="danger"
+        ></b-icon>
         {{ message.dislikes }}
-        ratio {{ (message.likes / message.dislikes).toFixed(2) }}
+        ratio {{ (message.likes / message.dislikes).toFixed(1) }}
       </p>
     </section>
 
@@ -39,7 +48,7 @@
         >Kommentera</b-button
       >
     </b-form>
-  </div>
+  </b-container>
 </template>
 
 <script>
@@ -54,6 +63,7 @@ export default {
         uuid: uuid.v4(),
         likes: 0,
         dislikes: 0,
+        time: '',
       },
     }
   },
@@ -66,6 +76,7 @@ export default {
         name: this.comment.name,
         likes: this.comment.likes,
         dislikes: this.comment.dislikes,
+        time: new Date().toLocaleString(),
       })
       this.comment.text = ''
       this.comment.name = ''
@@ -78,4 +89,11 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+b-icon:hover {
+  cursor: pointer;
+}
+section {
+  width: 50%;
+}
+</style>
