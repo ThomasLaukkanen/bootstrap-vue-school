@@ -1,12 +1,24 @@
 <template>
   <div>
     <section>
-      <h2>Kommentarer</h2>
+      <h2>Feedback sektion</h2>
+
+      <small>{{ $store.state.comments.length }} kommentarer</small>
+
       <p v-if="$store.state.comments.length < 1">
         Det finns inga kommentarer ännu
+        <b-icon icon="emoji-frown"></b-icon>
       </p>
       <p v-else :key="message.uuid" v-for="message in $store.state.comments">
-        {{ message.text }} {{ message.name }}
+        <b-avatar src="https://www.thispersondoesnotexist.com/image"></b-avatar>
+        {{ message.name }}
+        {{ message.text }}
+
+        <b-icon @click="message.likes++" icon="hand-thumbs-up"></b-icon>
+        {{ message.likes }}
+        <b-icon @click="message.dislikes++" icon="hand-thumbs-down"></b-icon>
+        {{ message.dislikes }}
+        ratio {{ (message.likes / message.dislikes).toFixed(2) }}
       </p>
     </section>
 
@@ -40,6 +52,8 @@ export default {
         text: '',
         name: '',
         uuid: uuid.v4(),
+        likes: 0,
+        dislikes: 0,
       },
     }
   },
@@ -50,6 +64,8 @@ export default {
         uuid: this.$uuid.v4(),
         text: this.comment.text,
         name: this.comment.name,
+        likes: this.comment.likes,
+        dislikes: this.comment.dislikes,
       })
       this.comment.text = ''
       this.comment.name = ''
