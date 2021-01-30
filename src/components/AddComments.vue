@@ -1,5 +1,5 @@
 <template>
-  <b-container fluid="sm">
+  <div>
     <section>
       <h2>Feedback sektion</h2>
       <small>{{ $store.state.comments.length }} kommentarer</small>
@@ -48,7 +48,7 @@
         >Kommentera</b-button
       >
     </b-form>
-  </b-container>
+  </div>
 </template>
 
 <script>
