@@ -1,7 +1,7 @@
 <template>
   <b-container>
     <b-row>
-      <b-col sm="4">
+      <b-col>
         <PolisTable />
       </b-col>
     </b-row>

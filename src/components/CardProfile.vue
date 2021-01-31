@@ -4,8 +4,9 @@
       :title="title"
       :img-src="img"
       img-top
-      style="max-width: 20rem"
+      style="max-width: 15rem"
       class="mb-2"
+      :sub-title="subtitle"
     >
       <b-card-text>
         {{ text }}
@@ -23,6 +24,7 @@ export default {
     title: String,
     img: String,
     text: String,
+    subtitle: String,
   },
 }
 </script>

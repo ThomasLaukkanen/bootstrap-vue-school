@@ -1,7 +1,21 @@
 <template>
   <b-container>
     <AddComments @my-event="theEvent" />
-    <CardProfile title="Thomas Laukkanen" text="Blablabla" />
+    <h2>
+      Det finns totalt {{ $store.state.politiker.length }} Politiker i Göteborg
+    </h2>
+    <b-row>
+      <b-card-group deck>
+        <CardProfile
+          :key="person.hangar_guid"
+          v-for="person in $store.state.politiker"
+          :title="person.tilltalsnamn + ' ' + person.efternamn"
+          :text="person.status"
+          :img="person.bild_url_max"
+          :subtitle="person.parti"
+        />
+      </b-card-group>
+    </b-row>
   </b-container>
 </template>
 
@@ -24,7 +38,7 @@ export default {
   created() {
     axios
       .get(
-        'https://data.riksdagen.se/personlista/?iid=&fnamn=&enamn=&f_ar=&kn=&parti=&valkrets=G%C3%B6teborgs+kommun&rdlstatus=&org=&utformat=json&sort=sorteringsnamn&sortorder=asc&termlista='
+        'https://data.riksdagen.se/personlista/?iid=&fnamn=&enamn=&f_ar=&kn=&parti=&valkrets=G%C3%B6teborgs+kommun&rdlstatus=&org=&utformat=json&sort=parti&sortorder=asc&termlista='
       )
       .then((response) =>
         this.$store.commit('addNameToList', response.data.personlista.person)
