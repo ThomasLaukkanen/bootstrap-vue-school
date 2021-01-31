@@ -1,5 +1,11 @@
 <template>
-  <div><PolisTable /></div>
+  <b-container>
+    <b-row>
+      <b-col sm="4">
+        <PolisTable />
+      </b-col>
+    </b-row>
+  </b-container>
 </template>
 
 <script>

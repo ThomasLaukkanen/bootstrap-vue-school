@@ -1,13 +1,8 @@
 <template>
-  <div class="home">
-    <p :key="politiker" v-for="politiker in $store.state.politiker">
-      {{ politiker }}
-    </p>
-
-    <b-button @click="onClick" variant="primary">Ändra värde</b-button>
+  <b-container>
     <HelloWorld msg="Hjälp till att skapa drömstaden Göteborg!" />
     <SearchField />
-  </div>
+  </b-container>
 </template>
 
 <script>
