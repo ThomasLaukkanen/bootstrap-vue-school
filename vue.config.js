@@ -11,6 +11,7 @@ module.exports = {
     },
     name: 'Göteborgarna',
     themeColor: '#007bbd',
+    msTileColor: '#007bbd',
     workboxOptions: {
       runtimeCaching: [
         {
