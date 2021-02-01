@@ -1,6 +1,13 @@
 <template>
   <div>
-    <b-table striped hover :items="items" :fields="fields"> </b-table>
+    <b-table
+      striped
+      hover
+      :items="items"
+      :fields="fields"
+      class="shadow rounded"
+    >
+    </b-table>
   </div>
 </template>
 

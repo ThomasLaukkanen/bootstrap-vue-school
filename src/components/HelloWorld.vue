@@ -11,7 +11,7 @@
         />
       </b-col>
       <b-col>
-        <p>
+        <p class="shadow p-3 mb-5 bg-white rounded">
           Göteborgarna är Sveriges största open source projekt som är helt
           transparant, och där alla invånare kan vara med och skapa en bättre
           stad. Tillsammans kan vi bygga något helt unikt som hela staden kan ta

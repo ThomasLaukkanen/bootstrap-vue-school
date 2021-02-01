@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>STAT SPAGE</h1>
+    <h1>Vad tycker Göteborgarna igentligen?</h1>
   </div>
 </template>
 
