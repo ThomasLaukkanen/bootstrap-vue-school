@@ -14,11 +14,9 @@ export default {
   },
   created() {
     getOnlineStatus().then((isOnline) => {
-      console.log(
-        isOnline
-          ? (this.status = 'Du är Online')
-          : (this.status = ' Du är Offline')
-      )
+      isOnline
+        ? (this.status = 'Du är Online')
+        : (this.status = ' Du är Offline')
     })
 
     function getOnlineStatus() {
