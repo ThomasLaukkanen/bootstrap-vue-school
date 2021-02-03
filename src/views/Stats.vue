@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <b-container>
     <h1>Vad tycker Göteborgarna igentligen?</h1>
-  </div>
+  </b-container>
 </template>
 
 <script>

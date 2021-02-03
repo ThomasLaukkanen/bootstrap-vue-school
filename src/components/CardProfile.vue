@@ -26,14 +26,6 @@ export default {
     text: String,
     subtitle: String,
   },
-  computed: {
-    initials() {
-      return this.title
-        .split(' ')
-        .map((name) => name.charAt(0))
-        .join('.')
-    },
-  },
 }
 </script>
 

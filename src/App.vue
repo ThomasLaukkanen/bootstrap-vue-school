@@ -2,7 +2,7 @@
   <div id="app">
     <div id="wrapper">
       <Navbar />
-      <router-view />
+      <router-view id="view" />
     </div>
     <Footer />
   </div>
@@ -20,6 +20,9 @@ footer {
 }
 #wrapper {
   padding-bottom: 64px;
+}
+#view {
+  margin-top: 64px;
 }
 </style>
 

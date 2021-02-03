@@ -3,7 +3,6 @@
     <section>
       <h2>Feedback sektion</h2>
       <small>{{ $store.state.comments.length }} kommentarer</small>
-
       <p v-if="$store.state.comments.length < 1">
         Det finns inga kommentarer ännu
         <b-icon icon="emoji-frown"></b-icon>
@@ -14,7 +13,6 @@
         {{ message.text }}
         <br />
         {{ message.time }}
-
         <b-icon
           @click="message.likes++"
           icon="hand-thumbs-up"
@@ -37,7 +35,9 @@
         placeholder="Lämna en kommentar"
         max-rows="3"
         required
+        maxlength="200"
       ></b-form-textarea>
+      <p>{{ characterLimit }} / 200</p>
       <b-form-input
         type="text"
         placeholder="Ditt namn"
@@ -84,6 +84,11 @@ export default {
     },
     onClick() {
       this.$emit('my-event')
+    },
+  },
+  computed: {
+    characterLimit() {
+      return this.comment.text.length
     },
   },
 }
