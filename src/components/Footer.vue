@@ -1,7 +1,7 @@
 <template>
   <footer class="bg-primary text-light">
-    <!-- {{ status }} -->
-    <ConnectivityExample></ConnectivityExample>
+    <!-- <ConnectivityExample></ConnectivityExample> -->
+    <Onlinechecker></Onlinechecker>
     <ul class="text-light">
       <li>
         <a href="#" class="text-light">
@@ -23,12 +23,13 @@
 </template>
 
 <script>
-import ConnectivityExample from './ConnectivityExample.vue'
+// import ConnectivityExample from './ConnectivityExample.vue'
+import Onlinechecker from './Onlinechecker.vue'
 export default {
   name: 'Footer',
   computed: {},
   watch: {},
-  components: { ConnectivityExample },
+  components: { Onlinechecker },
 }
 </script>
 
