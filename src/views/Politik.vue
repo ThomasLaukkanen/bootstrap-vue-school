@@ -1,6 +1,10 @@
 <template>
   <b-container>
     <AddComments @my-event="theEvent" />
+
+    <b-alert v-if="customMessage !== ''" variant="success" show>{{
+      customMessage
+    }}</b-alert>
     <h2>
       Det finns totalt {{ $store.state.politiker.length }} Politiker i Göteborg
     </h2>
@@ -29,10 +33,20 @@ export default {
     CardProfile,
     AddComments,
   },
+  data() {
+    return {
+      customMessage: '',
+    }
+  },
   methods: {
     theEvent() {
-      // alert('hej')
+      this.customMessage = 'Din kommentar har lagts tills'
       console.log('a custom event from addComments')
+    },
+  },
+  watch: {
+    customMessage() {
+      setTimeout(() => (this.customMessage = ''), 3000)
     },
   },
   created() {
