@@ -13,6 +13,13 @@ module.exports = {
     themeColor: '#007bbd',
     msTileColor: '#007bbd',
     workboxOptions: {
+      manifestTransforms: [
+        (manifest) => ({
+          manifest: manifest.concat([
+            { revision: 0, url: '../src/store/index.js' },
+          ]),
+        }),
+      ],
       runtimeCaching: [
         {
           handler: 'NetworkFirst',

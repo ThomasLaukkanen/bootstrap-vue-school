@@ -1,24 +1,15 @@
 <template>
   <footer class="bg-primary text-light">
     <!-- <ConnectivityExample></ConnectivityExample> -->
-    <Onlinechecker></Onlinechecker>
-    <ul class="text-light">
-      <li>
-        <a href="#" class="text-light">
-          Om Göteborgarna.se
-        </a>
-      </li>
-      <li>
-        <a href="#" class="text-light">
-          Cookies
-        </a>
-      </li>
-      <li>
-        <a href="#" class="text-light">
-          Bidra
-        </a>
-      </li>
-    </ul>
+    <Onlinechecker align="center"></Onlinechecker>
+
+    <b-nav align="center">
+      <b-nav-item link-classes="text-light">Om Göteborgarna.se</b-nav-item>
+      <b-nav-item link-classes="text-light">Cookies</b-nav-item>
+      <b-nav-item link-classes="text-light">Idelådan</b-nav-item>
+      <b-nav-item link-classes="text-light">Utvecklare</b-nav-item>
+      <b-nav-item link-classes="text-light">Utvecklare</b-nav-item>
+    </b-nav>
   </footer>
 </template>
 
@@ -35,13 +26,7 @@ export default {
 
 <style lang="scss" scoped>
 footer {
-  height: 64px;
+  min-height: 64px;
   width: 100vw;
-}
-ul {
-  display: flex;
-  justify-content: space-between;
-  width: 50%;
-  list-style-type: none;
 }
 </style>

@@ -1,7 +1,13 @@
 <template>
   <vue-online-offline @online="isOnline" @offline="isOffline">
-    <div slot="online">Du är online</div>
-    <div slot="offline">Im offline</div>
+    <div slot="online" class="text-success">
+      Du är online
+      <b-icon icon="dot" font-scale="4" shift-v="-4.5" shift-h="-4"></b-icon>
+    </div>
+    <div slot="offline" class="text-danger">
+      Du är offline
+      <b-icon icon="dot" font-scale="4" shift-v="-4.5" shift-h="-4"></b-icon>
+    </div>
   </vue-online-offline>
 </template>
 
