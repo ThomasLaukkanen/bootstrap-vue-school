@@ -2,7 +2,7 @@
   <div>
     <h1>{{ msg }}</h1>
     <b-row>
-      <b-col>
+      <b-col sm="12" md="6">
         <b-img
           src="https://goteborg.se/wps/wcm/connect/d57b2821-fb67-40ba-91e7-45034614a597/gbg_st_rgb_sociala+medier_high.png?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-d57b2821-fb67-40ba-91e7-45034614a597-nrSaC9-"
           alt="Göteborg"
@@ -10,7 +10,7 @@
           center
         />
       </b-col>
-      <b-col>
+      <b-col md="6">
         <p class="shadow p-3 mb-5 bg-white rounded">
           Göteborgarna är Sveriges största open source projekt som är helt
           transparant, och där alla invånare kan vara med och skapa en bättre

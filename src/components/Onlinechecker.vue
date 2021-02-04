@@ -19,9 +19,9 @@ export default {
     isOnline() {
       console.log('Du är online')
     },
-  },
-  isOffline() {
-    console.log('Du är offline')
+    isOffline() {
+      console.log('Du är offline')
+    },
   },
 }
 </script>
