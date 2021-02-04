@@ -3,7 +3,7 @@
     <h1>
       Här hittar du alla lediga jobb i Göteborg just nu
     </h1>
-    <SearchField />
+    <SearchField class="w-25 mt-4" />
   </b-container>
 </template>
 

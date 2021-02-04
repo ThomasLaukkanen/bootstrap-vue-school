@@ -1,12 +1,7 @@
-// Bootstrap body background
-// $body-bg: rgba(0, 0, 0, 0.9);
-
-// Bootstrap body foreground
-// $body-color: seashell;
 html {
   font-family: 'Poppins', sans-serif;
 }
-// Bootstrap theme colors
+
 $theme-colors: (
   'primary': #007bbd,
   'light': #ffffff,
@@ -14,13 +9,10 @@ $theme-colors: (
   'danger': #e73331,
 );
 
-// Sass imports (The variables need to be set prior to importing)
 @import '~bootstrap';
 @import '~bootstrap-vue';
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-// Unset default Vue CLI foreground color set in App.vue, to prevent override of
-// the color set in $body-color
 #app {
   color: unset;
 }

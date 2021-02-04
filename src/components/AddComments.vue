@@ -44,7 +44,7 @@
         required
         v-model="comment.name"
       ></b-form-input>
-      <b-button @click="onClick" type="submit" variant="primary"
+      <b-button @click="onClick" type="submit" variant="primary" class="mt-4"
         >Kommentera</b-button
       >
     </b-form>

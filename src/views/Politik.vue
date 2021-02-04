@@ -2,14 +2,14 @@
   <b-container>
     <AddComments @my-event="theEvent" />
 
-    <b-alert v-if="customMessage !== ''" variant="success" show>{{
+    <b-alert class="mt-4" v-if="customMessage !== ''" variant="success" show>{{
       customMessage
     }}</b-alert>
-    <h2>
+    <h2 class="mt-4">
       Det finns totalt {{ $store.state.politiker.length }} Politiker i Göteborg
     </h2>
     <b-row>
-      <b-card-group deck>
+      <b-card-group deck align-h="between">
         <CardProfile
           :key="person.hangar_guid"
           v-for="person in $store.state.politiker"

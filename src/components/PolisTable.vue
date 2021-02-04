@@ -6,6 +6,7 @@
       :items="items"
       :fields="fields"
       class="shadow rounded"
+      responsive
     >
     </b-table>
   </div>

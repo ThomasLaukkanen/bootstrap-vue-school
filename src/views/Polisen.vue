@@ -2,7 +2,7 @@
   <b-container>
     <b-row>
       <b-col>
-        <PolisTable />
+        <PolisTable class="mb-5" />
       </b-col>
     </b-row>
   </b-container>
@@ -17,4 +17,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+body {
+  overflow: hidden;
+}
+</style>
