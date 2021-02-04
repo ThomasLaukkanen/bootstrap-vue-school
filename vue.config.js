@@ -13,6 +13,11 @@ module.exports = {
     themeColor: '#007bbd',
     msTileColor: '#007bbd',
     exclude: [/swagger-ui/],
+    performance: {
+      hints: false,
+      maxEntrypointSize: 512000,
+      maxAssetSize: 512000,
+    },
     workboxOptions: {
       runtimeCaching: [
         {

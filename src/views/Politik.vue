@@ -15,7 +15,7 @@
           v-for="person in $store.state.politiker"
           :title="person.tilltalsnamn + ' ' + person.efternamn"
           :text="person.status"
-          :img="person.bild_url_80"
+          :img="person.bild_url_max"
           :subtitle="person.parti"
         />
       </b-card-group>
@@ -41,7 +41,6 @@ export default {
   methods: {
     theEvent() {
       this.customMessage = 'Din kommentar har lagts tills'
-      console.log('a custom event from addComments')
     },
   },
   watch: {
