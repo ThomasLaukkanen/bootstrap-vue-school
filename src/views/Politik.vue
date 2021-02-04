@@ -15,7 +15,7 @@
           v-for="person in $store.state.politiker"
           :title="person.tilltalsnamn + ' ' + person.efternamn"
           :text="person.status"
-          :img="person.bild_url_max"
+          :img="person.bild_url_80"
           :subtitle="person.parti"
         />
       </b-card-group>
