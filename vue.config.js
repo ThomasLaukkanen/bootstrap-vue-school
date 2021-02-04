@@ -12,14 +12,8 @@ module.exports = {
     name: 'Göteborgarna',
     themeColor: '#007bbd',
     msTileColor: '#007bbd',
+    exclude: [/swagger-ui/],
     workboxOptions: {
-      manifestTransforms: [
-        (manifest) => ({
-          manifest: manifest.concat([
-            { revision: 0, url: '../src/store/index.js' },
-          ]),
-        }),
-      ],
       runtimeCaching: [
         {
           handler: 'NetworkFirst',
