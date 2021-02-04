@@ -23,6 +23,7 @@ footer {
 }
 #view {
   margin-top: 64px;
+  margin-bottom: 64px;
 }
 </style>
 
