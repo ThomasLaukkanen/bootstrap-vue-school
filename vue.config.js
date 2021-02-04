@@ -25,8 +25,7 @@ module.exports = {
           options: {
             networkTimeoutSeconds: 5,
           },
-          urlPattern:
-            'https://polisen.se/api/events?locationname=G%C3%B6teborg',
+          urlPattern: /^https\:\/\/polisen\.se\/api\/events.*$/,
         },
         {
           handler: 'NetworkFirst',
