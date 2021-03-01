@@ -28,11 +28,11 @@ const routes = [
     component: Stats
   },
   {
-    path: '/politik/',
+    path: '/politik/:userName?',
     name: 'Politik',
     component: Politik
   },
-  { path: '/politik/:userName', name: 'Politik', component: Politik },
+
   {
     path: '/polisen',
     name: 'Polisen',

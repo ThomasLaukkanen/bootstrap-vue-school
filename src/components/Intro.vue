@@ -4,8 +4,8 @@
     <b-row>
       <b-col sm="12" md="6">
         <b-img
-          src="https://goteborg.se/wps/wcm/connect/d57b2821-fb67-40ba-91e7-45034614a597/gbg_st_rgb_sociala+medier_high.png?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-d57b2821-fb67-40ba-91e7-45034614a597-nrSaC9-"
-          alt="Göteborg"
+          :src="require('../assets/goteborg.png')"
+          alt="Göteborgs logo"
           fluid
           center
         />
@@ -27,20 +27,20 @@
 </template>
 
 <script>
-export default {
-  name: 'Intro',
-  props: {
-    msg: String,
-  },
-}
+  export default {
+    name: 'Intro',
+    props: {
+      msg: String
+    }
+  }
 </script>
 
 <style scoped lang="scss">
-h1 {
-  text-align: center;
-  margin: 32px auto;
-}
-img {
-  width: 50%;
-}
+  h1 {
+    text-align: center;
+    margin: 32px auto;
+  }
+  img {
+    width: 50%;
+  }
 </style>
