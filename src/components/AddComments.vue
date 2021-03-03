@@ -7,7 +7,12 @@
         Det finns inga kommentarer ännu
         <b-icon icon="emoji-frown"></b-icon>
       </p>
-      <p v-else :key="message.uuid" v-for="message in $store.state.comments">
+      <p
+        class="comments"
+        v-else
+        :key="message.uuid"
+        v-for="message in $store.state.comments"
+      >
         <b-avatar src="https://www.thispersondoesnotexist.com/image"></b-avatar>
         <b> @ {{ message.name }} </b>
         {{ message.text }}
@@ -103,7 +108,7 @@
     h2 {
       color: var(--primary);
     }
-    p {
+    .comments {
       margin-top: 2em;
       margin-bottom: 2em;
       background-color: var(--primary);
