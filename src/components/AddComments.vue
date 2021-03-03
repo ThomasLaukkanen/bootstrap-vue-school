@@ -106,9 +106,10 @@
     p {
       margin-top: 2em;
       margin-bottom: 2em;
-      background-color: rgba(50, 130, 235, 0.308);
+      background-color: var(--primary);
       border-radius: 8px;
       padding: 16px;
+      color: var(--light);
     }
   }
 
