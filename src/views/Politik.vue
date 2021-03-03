@@ -12,8 +12,9 @@
       Det finns totalt {{ $store.state.politiker.length }} Politiker i Göteborg
     </h2>
     <b-row>
-      <b-card-group deck align-h="between">
+      <b-card-group deck class="d-flex justify-content-center   flex-wrap">
         <CardProfile
+          class="m-2"
           :key="person.hangar_guid"
           v-for="person in $store.state.politiker"
           :title="person.tilltalsnamn + ' ' + person.efternamn"

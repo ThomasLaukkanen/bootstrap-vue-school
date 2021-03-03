@@ -52,53 +52,69 @@
 </template>
 
 <script>
-import { uuid } from 'vue-uuid'
+  import { uuid } from 'vue-uuid'
 
-export default {
-  data() {
-    return {
-      comment: {
-        text: '',
-        name: '',
-        uuid: uuid.v4(),
-        likes: 0,
-        dislikes: 0,
-        time: '',
+  export default {
+    data() {
+      return {
+        comment: {
+          text: '',
+          name: '',
+          uuid: uuid.v4(),
+          likes: 0,
+          dislikes: 0,
+          time: ''
+        }
+      }
+    },
+    methods: {
+      onSubmit(event) {
+        event.preventDefault()
+        this.$store.commit('addcomment', {
+          uuid: this.$uuid.v4(),
+          text: this.comment.text,
+          name: this.comment.name,
+          likes: this.comment.likes,
+          dislikes: this.comment.dislikes,
+          time: new Date().toLocaleString()
+        })
+        this.comment.text = ''
+        this.comment.name = ''
+        this.comment.uuid = this.$uuid.v4()
       },
+      onClick() {
+        this.$emit('my-event')
+      }
+    },
+    computed: {
+      characterLimit() {
+        return this.comment.text.length
+      }
     }
-  },
-  methods: {
-    onSubmit(event) {
-      event.preventDefault()
-      this.$store.commit('addcomment', {
-        uuid: this.$uuid.v4(),
-        text: this.comment.text,
-        name: this.comment.name,
-        likes: this.comment.likes,
-        dislikes: this.comment.dislikes,
-        time: new Date().toLocaleString(),
-      })
-      this.comment.text = ''
-      this.comment.name = ''
-      this.comment.uuid = this.$uuid.v4()
-    },
-    onClick() {
-      this.$emit('my-event')
-    },
-  },
-  computed: {
-    characterLimit() {
-      return this.comment.text.length
-    },
-  },
-}
+  }
 </script>
 
 <style lang="scss" scoped>
-b-icon:hover {
-  cursor: pointer;
-}
-section {
-  width: 50%;
-}
+  b-icon:hover {
+    cursor: pointer;
+  }
+  section {
+    width: 50%;
+    h2 {
+      color: var(--primary);
+    }
+    p {
+      margin-top: 2em;
+      margin-bottom: 2em;
+      background-color: rgba(50, 130, 235, 0.308);
+      border-radius: 8px;
+      padding: 16px;
+    }
+  }
+
+  @media (max-width: 870px) {
+    section {
+      width: 100%;
+    }
+  }
 </style>
