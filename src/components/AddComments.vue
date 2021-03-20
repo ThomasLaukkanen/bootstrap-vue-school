@@ -30,7 +30,12 @@
           variant="danger"
         ></b-icon>
         {{ message.dislikes }}
-        ratio {{ (message.likes / message.dislikes).toFixed(1) }}
+        Like ratio
+        {{
+          message.likes == 0 || message.dislikes == 0
+            ? ''
+            : (message.likes / message.dislikes).toFixed(1)
+        }}
       </p>
     </section>
 

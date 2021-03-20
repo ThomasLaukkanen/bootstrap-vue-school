@@ -1,11 +1,11 @@
 <template>
   <b-container>
-    <h1>Vad tycker Göteborgarna igentligen?</h1>
+    <h1>Statistik om Göteborg</h1>
   </b-container>
 </template>
 
 <script>
-export default {}
+  export default {}
 </script>
 
 <style lang="scss" scoped></style>
