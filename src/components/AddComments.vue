@@ -13,12 +13,13 @@
         :key="message.uuid"
         v-for="message in $store.state.comments"
       >
-        <b-avatar src="https://www.thispersondoesnotexist.com/image"></b-avatar>
-        <b> @ {{ message.name }} </b>
+        <b-avatar src="https://www.thispersondoesnotexist.com/image" />
+        <b> {{ message.name }} </b>{{ message.time }}
+        <br />
         {{ message.text }}
         <br />
-        {{ message.time }}
         <b-icon
+          class="hover"
           @click="message.likes++"
           icon="hand-thumbs-up"
           variant="success"
@@ -28,14 +29,9 @@
           @click="message.dislikes++"
           icon="hand-thumbs-down"
           variant="danger"
+          class="hover"
         ></b-icon>
         {{ message.dislikes }}
-        Like ratio
-        {{
-          message.likes == 0 || message.dislikes == 0
-            ? ''
-            : (message.likes / message.dislikes).toFixed(1)
-        }}
       </p>
     </section>
 
@@ -63,6 +59,7 @@
 
 <script>
   import { uuid } from 'vue-uuid'
+  import moment from 'moment'
 
   export default {
     data() {
@@ -86,7 +83,11 @@
           name: this.comment.name,
           likes: this.comment.likes,
           dislikes: this.comment.dislikes,
-          time: new Date().toLocaleString()
+          // time: new Date().toLocaleString()
+          time: new moment()
+            .locale('sv')
+            .utcOffset(1)
+            .format('lll')
         })
         this.comment.text = ''
         this.comment.name = ''
@@ -121,6 +122,9 @@
       padding: 16px;
       color: var(--light);
     }
+  }
+  .hover {
+    cursor: pointer;
   }
 
   @media (max-width: 870px) {
