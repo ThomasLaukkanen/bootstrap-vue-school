@@ -1,7 +1,10 @@
 <template>
   <b-container>
     <h1>
-      Här hittar du alla lediga jobb i Göteborg just nu
+      Här hittar du alla lediga jobb i Göteborg just nu..
+      <br>
+      UNDER UPPBYGGNAD
+      
     </h1>
     <SearchField class="w-25 mt-4" />
   </b-container>
