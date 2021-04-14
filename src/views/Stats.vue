@@ -1,11 +1,22 @@
 <template>
   <b-container>
     <h1>Statistik om Göteborg</h1>
+    <Chart />
   </b-container>
 </template>
 
 <script>
-  export default {}
+import Chart from '@/components/Chart.vue'
+import chartData from '../chart.js'
+
+  export default {
+    data(){
+      return {
+        chartData: chartData  
+      }
+    }
+     ,components: { Chart },
+  }
 </script>
 
 <style lang="scss" scoped></style>
