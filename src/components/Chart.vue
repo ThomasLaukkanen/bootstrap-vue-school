@@ -5,8 +5,18 @@
 </template>
 
 <script>
+import chartData from '../chart.js'
   export default {  
-  name: 'Chart'
+  name: 'Chart',
+    data(){
+      return {
+       chartData  
+      }
+    },
+    mounted() {
+    const ctx = document.getElementById('chart');
+    new chartData(ctx, this.chartData);
+  }
   }
 </script>
 

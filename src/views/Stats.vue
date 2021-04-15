@@ -1,7 +1,7 @@
 <template>
   <b-container>
     <h1>Statistik om Göteborg</h1>
-    <Chart />
+    <Chart  id="chart"/>
   </b-container>
 </template>
 
@@ -15,6 +15,7 @@ import chartData from '../chart.js'
         chartData: chartData  
       }
     }
+  
      ,components: { Chart },
   }
 </script>
