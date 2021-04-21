@@ -6,6 +6,8 @@
 
 <script>
 import chartData from '../chart.js'
+
+
   export default {  
   name: 'Chart',
     data(){
