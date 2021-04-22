@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div >
     <h1>{{ msg }}</h1>
-    <b-row>
-      <b-col sm="12" md="6">
+    <b-row> 
+      <b-col sm="12" md="6" class="d-flex  flex-column justify-content-center" >
         <b-img
           :src="require('../assets/goteborg.png')"
           alt="Göteborgs logo"
@@ -11,7 +11,7 @@
         />
       </b-col>
       <b-col md="6">
-        <p class="shadow p-3 mb-5 bg-white rounded">
+        <p class="shadow-lg p-5 mb-5 bg-white rounded">
           Göteborgarna är Sveriges största open source projekt som är helt
           transparant, och där alla invånare kan vara med och skapa en bättre
           stad. Tillsammans kan vi bygga något helt unikt som hela staden kan ta

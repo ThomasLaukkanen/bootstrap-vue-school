@@ -1,6 +1,6 @@
 <template>
   <b-container>
-    <Intro msg="Hjälp till att skapa drömstaden Göteborg!" />
+    <Intro  msg="Hjälp till att skapa drömstaden Göteborg!" />
   </b-container>
 </template>
 
