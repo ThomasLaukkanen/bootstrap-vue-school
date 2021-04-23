@@ -12,12 +12,14 @@
         {{ text }}
       </b-card-text>
 
-      <b-button href="#" variant="primary">Läs mer</b-button>
+      <b-button @click="vibrate()" href="#" variant="primary">Läs mer</b-button>
     </b-card>
   </div>
 </template>
 
 <script>
+
+
 export default {
   name: 'CardProfile',
   props: {
@@ -25,7 +27,18 @@ export default {
     img: String,
     text: String,
     subtitle: String,
-  },
+  },methods: {
+    vibrate() {
+if (navigator.vibrate) {
+    window.navigator.vibrate(200);
+    
+}
+
+   return window.navigator.vibrate(1);
+   
+
+    }
+  }
 }
 </script>
 
