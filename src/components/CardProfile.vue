@@ -12,8 +12,11 @@
         {{ text }}
       </b-card-text>
 
-      <b-button @click="vibrate()" href="#" variant="primary">Läs mer</b-button>
+      <b-button @click="vibrate()" v-b-modal="modal1" href="#" variant="primary">Läs mer</b-button>
     </b-card>
+    <b-modal id="modal1" title="BootstrapVue">
+    <p class="my-4">Hello from modal!</p>
+  </b-modal>
   </div>
 </template>
 
