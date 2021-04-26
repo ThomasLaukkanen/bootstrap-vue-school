@@ -21,6 +21,7 @@
           :text="person.status"
           :img="person.bild_url_max"
           :subtitle="person.parti"
+          :theKey="person.hangar_guid"
         />
       </b-card-group>
     </b-row>
