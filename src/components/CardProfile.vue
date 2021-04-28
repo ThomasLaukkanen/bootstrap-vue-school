@@ -10,14 +10,17 @@
     >
       <b-card-text>
         {{ text }}
+        
       </b-card-text>
 
-      <b-button @click="vibrate()" :v-b-modal="theKey" href="#" variant="primary">Läs mer</b-button>
+      <b-button @click="vibrate()" v-b-modal="'modalen' + theKey" href="#" variant="primary">Läs mer</b-button>
     </b-card>
-    <b-modal :id="theKey" title="BootstrapVue">
-    <p class="my-4">Here will all the info be
-
-    </p>
+    <b-modal :id="'modalen' + theKey" title="BootstrapVue" button-size="sm"
+          hide-backdrop
+          ok-only
+          size="xl"
+          centered>
+    <p class="my-4">{{}}</p>
   </b-modal>
   </div>
 </template>
