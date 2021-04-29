@@ -20,7 +20,7 @@
           ok-only
           size="xl"
           centered>
-    <p class="my-4">{{}}</p>
+    <p class="my-4">{{email}}</p>
   </b-modal>
   </div>
 </template>
@@ -35,7 +35,8 @@ export default {
     img: String,
     text: String,
     subtitle: String,
-    theKey: String
+    theKey: String,
+    email: String
   },methods: {
     vibrate() {
 if (navigator.vibrate) {

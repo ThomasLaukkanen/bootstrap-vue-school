@@ -22,6 +22,7 @@
           :img="person.bild_url_max"
           :subtitle="person.parti"
           :theKey="person.hangar_guid"
+          :email="person.personuppgift.uppgift"
         />
       </b-card-group>
     </b-row>
