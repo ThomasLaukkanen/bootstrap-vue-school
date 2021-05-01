@@ -15,12 +15,14 @@
 
       <b-button @click="vibrate()" v-b-modal="'modalen' + theKey" href="#" variant="primary">Läs mer</b-button>
     </b-card>
-    <b-modal :id="'modalen' + theKey" title="BootstrapVue" button-size="sm"
-          hide-backdrop
+    <b-modal :id="'modalen' + theKey" :title="title" button-size="sm"
+          
           ok-only
-          size="xl"
-          centered>
-    <p class="my-4">{{email}}</p>
+          size="s"
+          centered
+           >
+          <h2>Information</h2>
+    <p class="mb-5">Kontakta <a href="mailto:findEmail">{{findEmail}}</a> </p>
   </b-modal>
   </div>
 </template>
@@ -30,25 +32,38 @@
 
 export default {
   name: 'CardProfile',
+  data() {
+    return {
+      formatedemail: ""
+    
+    }
+  },
   props: {
     title: String,
     img: String,
     text: String,
     subtitle: String,
     theKey: String,
-    email: String
-  },methods: {
+    email: Array
+  },
+  methods: {
     vibrate() {
-if (navigator.vibrate) {
+  console.log(this.email);
+  if (navigator.vibrate) {
     window.navigator.vibrate(200);
-    
-}
-
-   return window.navigator.vibrate(1);
-   
-
     }
-  }
+// console.log(this.email.find(objekt => objekt.uppgift[0] === /riksdagen/).uppgift[0] )
+   return window.navigator.vibrate(1);
+      }
+    },
+    computed: {
+      findEmail() {
+        let email = this.email.find(objekt => objekt.kod  === "Officiell e-postadress" ).uppgift[0].replace("[på]", "@")
+       
+      return email
+
+      }
+    }
 }
 </script>
 
