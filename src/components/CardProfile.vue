@@ -15,14 +15,14 @@
 
       <b-button @click="vibrate()" v-b-modal="'modalen' + theKey" href="#" variant="primary">Läs mer</b-button>
     </b-card>
-    <b-modal :id="'modalen' + theKey" :title="title" button-size="sm"
+    <b-modal  class="p-5" :id="'modalen' + theKey" :title="title" button-size="sm"
           
           ok-only
           size="s"
           centered
            >
           <h2>Information</h2>
-    <p class="mb-5">Kontakta <a href="mailto:findEmail">{{findEmail}}</a> </p>
+    <p class="mb-5">Kontakta <a  :href="'mailto:' + findEmail">{{findEmail}}</a> </p>
   </b-modal>
   </div>
 </template>
@@ -52,6 +52,7 @@ export default {
   if (navigator.vibrate) {
     window.navigator.vibrate(200);
     }
+       
 // console.log(this.email.find(objekt => objekt.uppgift[0] === /riksdagen/).uppgift[0] )
    return window.navigator.vibrate(1);
       }
