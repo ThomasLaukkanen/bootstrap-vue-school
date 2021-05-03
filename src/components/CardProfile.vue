@@ -22,7 +22,7 @@
           centered
            >
           <h2>Information</h2>
-    <p class="mb-5">Kontakta <a  :href="'mailto:' + findEmail">{{findEmail}}</a> </p>
+    <p class="mb-5">Email: <a  :href="'mailto:' + findEmail">{{findEmail}}</a> </p>
   </b-modal>
   </div>
 </template>
