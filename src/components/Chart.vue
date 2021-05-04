@@ -9,7 +9,7 @@ import chartData from '../chart.js'
 
 
   export default {  
-  name: 'Chart',
+     name: 'Chart',
     data(){
       return {
        chartData  
