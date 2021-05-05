@@ -6,6 +6,7 @@
 
 <script>
 import chartData from '../chart.js'
+import Chart from 'chart.js'
 
 
   export default {  
@@ -17,7 +18,7 @@ import chartData from '../chart.js'
     },
     mounted() {
     const ctx = document.getElementById('chart');
-    new chartData(ctx, this.chartData);
+    new Chart(ctx, this.chartData);
   }
   }
 </script>
