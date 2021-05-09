@@ -14,8 +14,9 @@
   min-height: 100vh;
 }
 
-footer {
+Footer {
   position: absolute;
+  overflow: hidden;
   bottom: 0;
 }
 #wrapper {
