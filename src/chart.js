@@ -46,6 +46,7 @@ type: "bar",
   }]
   },
   options: {
+    responsive: true,
     
      scales: {
       y: {
