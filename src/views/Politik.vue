@@ -9,7 +9,7 @@
       customMessage
     }}</b-alert>
     <h2 class="mt-4">
-      Det finns totalt {{ $store.state.politiker.length }} Politiker i Göteborg
+      Det finns totalt {{ $store.state.politiker.length }} politiker i Göteborg
     </h2>
     <b-row>
       <b-card-group deck class="d-flex justify-content-center   flex-wrap">
