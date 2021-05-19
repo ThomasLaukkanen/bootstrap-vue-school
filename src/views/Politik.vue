@@ -11,6 +11,9 @@
     <h2 class="mt-4">
       Det finns totalt {{ $store.state.politiker.length }} politiker i Göteborg.
     </h2>
+    <a href="https://politiker.goteborg.se/"
+      >Kontakuppgifter till övriga beslutfattare i Göteborg</a
+    >
     <b-row>
       <b-card-group deck class="d-flex justify-content-center   flex-wrap">
         <CardProfile
