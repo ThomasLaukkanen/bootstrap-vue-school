@@ -7,8 +7,11 @@
       webteknologi. Det finns mycket vi alla kan göra, men för att åstadkomma
       någonting så måste vi organisera oss på ett effektivt sätt. Se
       göteborgarna som en plattform som möjligör en mer öppen och bättre
-      demokrati, där alla kan vara med och bestämma och påverka. Om ni vill ha någon
-      speciell funktionalitet då får vi bygga upp det tillsammans.
+      demokrati, där alla kan vara med och bestämma och påverka. Om ni vill ha
+      någon speciell funktionalitet då får vi bygga upp det tillsammans.
     </p>
+    <a href="https://github.com/ThomasLaukkanen/bootstrap-vue-school">
+      Länk till Github</a
+    >
   </b-container>
 </template>
