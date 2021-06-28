@@ -11,7 +11,7 @@
       någon speciell funktionalitet då får vi bygga upp det tillsammans.
     </p>
     <a href="https://github.com/ThomasLaukkanen/bootstrap-vue-school">
-      Länk till Github</a
+      Länk till Github repository</a
     >
   </b-container>
 </template>

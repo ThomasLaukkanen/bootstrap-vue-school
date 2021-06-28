@@ -16,7 +16,7 @@
     >
     <br />
     <a
-      class="m-5"
+      class="mb-5"
       href="https://goteborg.se/wps/portal/start/kommun-o-politik/kommunfakta/ekonomi/budget?uri=gbglnk%3Agbg.page.f5024a79-3755-4ba0-896d-6c2288d43acf"
       >Göteborgs Stads budget(Alla år)</a
     >

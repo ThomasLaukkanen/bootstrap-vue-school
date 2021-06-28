@@ -1,8 +1,10 @@
 <template>
-  <div >
+  <div>
+    <h1 class="heroText primary">Göteborgarna</h1>
     <h1>{{ msg }}</h1>
-    <b-row> 
-      <b-col sm="12" md="6" class="d-flex flex-column justify-content-center" >
+    <h3>Tillsammans skapar vi något unikt.</h3>
+    <b-row>
+      <b-col sm="12" md="6" class="d-flex flex-column justify-content-center">
         <b-img
           :src="require('../assets/goteborg.png')"
           alt="Göteborgs logo"
@@ -10,7 +12,7 @@
           center
         />
       </b-col>
-      <b-col md="6" sm="12"   >
+      <b-col md="6" sm="12">
         <p class="shadow-lg p-5 mt-5 mb-5 bg-white rounded">
           Göteborgarna är Sveriges största open source projekt som är helt
           transparant, och där alla invånare kan vara med och skapa en bättre
@@ -39,8 +41,17 @@
   h1 {
     text-align: center;
     margin: 32px auto;
+    font-weight: 700;
+  }
+  h3 {
+    text-align: center;
+    margin-top: -32px;
   }
   img {
     width: 50%;
+  }
+  .heroText {
+    margin-bottom: -30px;
+    font-size: 3rem;
   }
 </style>
